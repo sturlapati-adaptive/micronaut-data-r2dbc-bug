@@ -1,0 +1,17 @@
+micronaut:
+  application:
+    name: r2dbcBug
+datasources:
+  default:
+    url: jdbc:postgresql://localhost:5432/postgres
+    driverClassName: org.postgresql.Driver
+    username: postgres
+    password: ''
+r2dbc:
+  datasources:
+    default:
+      schema-generate: CREATE_DROP
+      dialect: POSTGRES
+      url: r2dbc:postgresql://localhost:5432/postgres
+      username: postgres
+      password: ''
